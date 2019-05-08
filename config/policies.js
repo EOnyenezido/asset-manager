@@ -17,6 +17,11 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+ '*': 'is-logged-in',
+
+ // Bypass the `is-logged-in` policy for:
+ 'registration/*': true,
+ 'auth/login': true,
+ 'images/get-user-avatar': true,
 
 };
