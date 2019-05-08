@@ -24,9 +24,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'pages/homepage'
-  },
+  // '/': {
+  //   view: 'pages/homepage'
+  // },
 
   /***************************************************************************
   *                                                                          *
@@ -44,6 +44,22 @@ module.exports.routes = {
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
 
+  // Registration
+  'POST  /api/v1/registration/signup':                       { action: 'registration/signup' },
+
+  // Login and Logout
+  'POST  /api/v1/auth/login':                       { action: 'auth/login' },
+  'POST  /api/v1/auth/logout':                       { action: 'auth/logout' },
+
+  // User
+  'GET /api/v1/user/get-user':                      { action: 'user/get-user' },
+  'GET /api/v1/user/get-user/:userId':              { action: 'user/get-user-with-id' },
+  'DELETE /api/v1/user/delete-my-account':              { action: 'user/delete-my-account' },
+  'POST /api/v1/user/change-password':              { action: 'user/change-password' },
+
+  // Images
+  'POST  /api/v1/images/set-user-avatar':                       { action: 'images/set-user-avatar' },
+  'GET  /user/avatar/:userId':                       { action: 'images/get-user-avatar' },
 
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
