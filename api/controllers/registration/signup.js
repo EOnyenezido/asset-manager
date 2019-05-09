@@ -94,8 +94,6 @@ the account verification message.)`,
       firstName: inputs.firstName,
       lastName: inputs.lastName,
       phoneNumber: inputs.phoneNumber,
-      birthDate: inputs.birthDate,
-      gender: inputs.gender,
       tosAcceptedByIp: this.req.ip
     })
     .intercept('E_UNIQUE', 'emailAlreadyInUse')

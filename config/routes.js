@@ -61,6 +61,14 @@ module.exports.routes = {
   'POST  /api/v1/images/set-user-avatar':                       { action: 'images/set-user-avatar' },
   'GET  /user/avatar/:userId':                       { action: 'images/get-user-avatar' },
 
+  // Software assets
+  'POST  /api/v1/software/create':                       { action: 'software/create-software' },
+  'POST  /api/v1/software/batch-create':                       { action: 'software/batch-create' },
+  'PUT /api/v1/software/edit/:softwareId':              { action: 'software/edit-software' },
+  'DELETE /api/v1/software/delete/:softwareId':              { action: 'software/delete-software' },
+  'GET /api/v1/software/get/:softwareId':              { action: 'software/get-software' },
+  'GET /api/v1/softwares/get/:postId':              { action: 'software/get-softwares' },
+
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
